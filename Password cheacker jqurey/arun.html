@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            margin-left: 400px;
+            margin-top: 300px;
+
+        }
+
+        #arun {
+
+            margin-left: 350px;
+            height: 40px;
+            width: 90px;
+           border: none;
+            background-color: rgb(141, 27, 27);
+            text-align: center;
+
+        }
+
+        input {
+
+            height: 40px;
+            width: 300px;
+            border: 2px solid navy;
+        }
+
+        .abc {
+            position: absolute;
+            top: 360px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <h1>Password cheacker jqurey </h1>
+        <input type="password" id="password" oninput="abc()">
+
+
+        <button class="abc" id="arun" style="margin-left: 30px;"></button>
+    </div>
+    <script>
+        function abc() {
+            let a = document.getElementById("password").value;
+            if (a.length < 4) {
+                document.getElementById("arun").innerHTML = "Weak";
+                document.getElementById("arun").style.color = "white";
+            }
+
+            else if (a.length > 4 && a.length < 8) {
+                document.getElementById("arun").innerHTML = "Medium";
+                document.getElementById("arun").style.color = "white";
+            }
+            else if (a.length > 8) {
+                document.getElementById("arun").innerHTML = "Strong";
+                document.getElementById("arun").style.color = "white";
+            }
+            else {
+                dcument.getElementById("arun").innerHTML = "";
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>
